@@ -1,3 +1,25 @@
+# CLICK-MUNCH
+
+Descubre, Ordena, Valora: Tu experiencia gastronómica al alcance de un clic-munch.
+
+# Desarrollado por:
+
+- Michael Stiven Betancourt
+- Santiago Bejarano Ariza
+- Johan Sebastian Roa
+
+# Descripción 
+
+Nuestra aplicación es una plataforma innovadora diseñada para transformar la experiencia gastronómica de los usuarios y optimizar el servicio en los restaurantes. Con un enfoque en la comodidad y la interactividad, la aplicación permite a los usuarios:
+
+- *Explorar Menús*: Accede a los menús digitales de los restaurantes  cercanos, con descripciones detalladas de los platillos, imágenes tentadoras y precios actualizados.
+- *Realizar Pedidos*: Ordena tus comidas favoritas directamente desde la aplicación, ya sea para disfrutar en el restaurante, recogerlas o pedirlas a domicilio.
+- *Valorar y Recomendar*: Comparte tu experiencia calificando los restaurantes y escribiendo reseñas. Ayuda a otros usuarios a encontrar los mejores lugares para comer y mejora la calidad del servicio al brindar tu retroalimentación.
+La aplicación es una solución ideal para quienes buscan descubrir nuevos sabores, disfrutar de un proceso de pedido rápido y contribuir a una comunidad gastronómica vibrante. Además, ofrece a los restaurantes herramientas valiosas para gestionar pedidos y recibir opiniones directamente de sus clientes, lo que les ayuda a mejorar y destacar en el mercado.
+
+Con nuestra aplicación, llevarás el control total de tu experiencia gastronómica, desde la búsqueda hasta la valoración. ¡Explorar, ordenar y valorar nunca fue tan fácil!
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
