@@ -1,0 +1,60 @@
+{
+  "stores": [
+    {
+      "name": "Mc Donnalds",
+      "alias":"Calle 45",
+      "email": "mcdonnalds45@gmail.com",
+      "password": "Password1234567",
+      "address": "Calle 45 # 8 74 Bogotá 5.6584656,-74.21365465"
+    },
+    {
+      "name": "Mc Donnalds",
+      "alias":"Calle 53",
+      "email": "mcdonnalds53@gmail.com",
+      "password": "Password1234567",
+      "address": "Calle 53 # 23 74 Bogotá 5.6584656,-74.21365465"
+    },
+    {
+      "name": "Burger King",
+      "alias":"Calle 45",
+      "email": "burgerking45@gmail.com",
+      "password": "Password1234567",
+      "address": "Calle 45 # 8 74 Bogotá 5.6584656,-74.21365465"
+    },
+    {
+      "name": "Burger King",
+      "alias":"Calle 63",
+      "email": "burgerking63@gmail.com",
+      "password": "Password1234567",
+      "address": "Calle 63 # 13 70 Bogotá 5.6584656,-74.21365465"
+    },
+    {
+      "name": "Sopitas y Frijolada",
+      "alias": "principal",
+      "email": "sopitas53@gmail.com",
+      "password": "Password1234567",
+      "address": "Calle 53 # 15 04 Bogotá 5.6584656,-74.21365465"
+    },
+    {
+      "name": "Barbaros",
+      "alias":"Calle 45",
+      "email": "barbaros45@gmail.com",
+      "password": "Password1234",
+      "address": "Calle 45 # 16 12 Bogotá 5.6584656,-74.21365465"
+    },
+    {
+      "name": "Sanalejo",
+      "alias":"Calle 85",
+      "email": "sanalejo85@gmail.com",
+      "password": "Password12367",
+      "address": "Calle 85 # 11 15 Bogotá 5.6584656,-74.21365465"
+    },
+    {
+      "name": "Cumbiambare",
+      "alias":"Principal",
+      "email": "cumbiabar@gmail.com",
+      "password": "Password123",
+      "address": "Calle 25 # 10 74 Bogotá 5.6584656,-74.21365465"
+    }
+  ]
+}
