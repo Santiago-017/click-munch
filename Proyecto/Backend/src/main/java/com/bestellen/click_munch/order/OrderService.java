@@ -29,6 +29,14 @@ public class OrderService {
         this.orderDessertRepository = orderDessertRepository;
     }
 
+    public List<Order> findAll() {
+        return (List<Order>) orderRepository.findAll();
+    }
+
+    public List<Order> findByUserId(Integer userId) {
+        return (List<Order>) orderRepository.findByUserId(userId);
+    }
+
     public void createOrder(OrderRequest orderRequest) {
         Order savedOrder = orderRepository.save(orderRequest.toOrder());
         orderRequest.plateIds().forEach(plateId -> {
@@ -45,7 +53,7 @@ public class OrderService {
         });
     }
 
-    public Order getOrderById(Integer id) {
+    public Order findById(Integer id) {
         return orderRepository.findById(id).orElse(null);
     }
 
@@ -54,26 +62,17 @@ public class OrderService {
     }
 
     public void updateOrder(Integer id, Order order) {
-        orderRepository.save(order);
-    }
-
-    public List<Order> getAllOrders() {
-        return (List<Order>) orderRepository.findAll();
+        if(orderRepository.findById(id).isPresent()) {
+            orderRepository.save(order);
+        }
     }
 
     public List<Order> getOrdersByStatus(Status status) {
         return (List<Order>) orderRepository.findByStatus(status);
     }
 
-    public List<Order> getOrdersByUserId(Integer userId) {
-        return (List<Order>) orderRepository.findByUserId(userId);
-    }
-
     public List<Order> getOrdersByStoreId(Integer storeId) {
         return (List<Order>) orderRepository.findByStoreId(storeId);
     }
 
-    public List<Order> findAll() {
-        return (List<Order>) orderRepository.findAll();
-    }
 }

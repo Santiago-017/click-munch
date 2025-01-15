@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 @Component
-//@Order(1)
+@Order(1)
 public class UserJsonDataLoader implements CommandLineRunner {
     private static final Logger log = LoggerFactory.getLogger(UserJsonDataLoader.class);
     private final UserRepository userRepository;

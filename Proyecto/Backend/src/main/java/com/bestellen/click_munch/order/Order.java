@@ -1,14 +1,11 @@
 package com.bestellen.click_munch.order;
 
-import com.bestellen.click_munch.menu.Dessert;
-import com.bestellen.click_munch.menu.Drink;
-import com.bestellen.click_munch.menu.Plate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.data.relational.core.mapping.Table;
 
-import java.util.List;
+import java.util.Set;
 
 
 @Table("orders")
@@ -20,11 +17,11 @@ public record Order(
         @Column("store_id")
         Integer storeId,
         @MappedCollection(idColumn = "order_id")
-        List<OrderPlate> plates,
+        Set<OrderPlate> plates,
         @MappedCollection(idColumn = "order_id")
-        List<OrderDrink> drinks,
+        Set<OrderDrink> drinks,
         @MappedCollection(idColumn = "order_id")
-        List<OrderDessert> desserts,
+        Set<OrderDessert> desserts,
         @Column("total_price")
         Double total,
         Status status,

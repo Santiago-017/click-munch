@@ -1,8 +1,7 @@
 package com.bestellen.click_munch.user;
 
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class UserService {
@@ -13,8 +12,12 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public User save(User user) {
-        return userRepository.save(user);
+    public void save(User user) {
+        userRepository.save(user);
+    }
+
+    public Iterable<User> findAll() {
+        return userRepository.findAll();
     }
 
     public User findById(Integer id) {
@@ -23,5 +26,26 @@ public class UserService {
 
     public User findByUsername(String username) {
         return userRepository.findByUsername(username);
+    }
+
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+
+    public User findByPhone(String phone) {
+        return userRepository.findByPhone(phone);
+    }
+
+    public void deleteById(Integer id) {
+        userRepository.deleteById(id);
+    }
+    @Transactional
+    public void updateOrder(Integer userId) {
+        userRepository.addOrder(userId);
+    }
+
+    @Transactional
+    public void updateUser(User user) {
+        userRepository.updateUser(user.name(), user.email(), user.password(), user.phone(), user.username());
     }
 }

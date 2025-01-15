@@ -16,4 +16,7 @@ public record OrderRequest(
     public Order toOrder() {
         return new Order(null, userId, storeId, null, null, null, totalAmount, status, paymentMethod);
     }
+    public Order toOrder(Integer id){
+        return new Order(id, userId, storeId, null, null, null, totalAmount, status, paymentMethod);
+    }
 }
