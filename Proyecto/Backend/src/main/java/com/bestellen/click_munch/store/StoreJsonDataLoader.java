@@ -11,7 +11,7 @@ import java.io.InputStream;
 import java.util.logging.Logger;
 
 @Component
-//@Order(1)
+@Order(1)
 public class StoreJsonDataLoader implements CommandLineRunner {
 
     private static final Logger log = Logger.getLogger(StoreJsonDataLoader.class.getName());
@@ -28,8 +28,8 @@ public class StoreJsonDataLoader implements CommandLineRunner {
         if(storeRepository.count() == 0){
             try(InputStream inputStream = TypeReference.class.getResourceAsStream("/data/stores.json")) {
                 Stores stores = objectMapper.readValue(inputStream, Stores.class);
-                log.info("Loaded stores data - 8 records");
                 storeRepository.createAll(stores.stores());
+                log.info("Loaded stores data - 8 records");
             }catch (IOException e) {
                 throw new RuntimeException("Failed to load stores data", e);
             }

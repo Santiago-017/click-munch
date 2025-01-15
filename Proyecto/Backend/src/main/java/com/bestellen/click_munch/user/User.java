@@ -5,9 +5,11 @@ import com.bestellen.click_munch.store.Store;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.util.List;
+import java.util.Set;
 
 @Table("users")
 public record User(
@@ -24,7 +26,9 @@ public record User(
         String password,
         @NotEmpty
         String phone,
-        List<Order> orders,
-        List<Store> Favorites) {
+        @MappedCollection(idColumn = "user_id")
+        Set<Order> orders)
+        //List<Store> Favorites)
+        {
 
 }

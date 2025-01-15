@@ -1,7 +1,9 @@
 package com.bestellen.click_munch.store;
 
 import com.bestellen.click_munch.menu.*;
+import org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -13,7 +15,10 @@ public class StoreService {
     private final DrinkRepository drinkRepository;
     private final DessertRepository dessertRepository;
 
-    public StoreService(StoreRepository storeRepository, PlateRepository plateRepository, DrinkRepository drinkRepository, DessertRepository dessertRepository) {
+    public StoreService(StoreRepository storeRepository,
+                        PlateRepository plateRepository,
+                        DrinkRepository drinkRepository,
+                        DessertRepository dessertRepository) {
         this.storeRepository = storeRepository;
         this.plateRepository = plateRepository;
         this.drinkRepository = drinkRepository;
@@ -32,6 +37,10 @@ public class StoreService {
 
     public List<Store> findByName(String name) {
         return (List<Store>) storeRepository.findByName(name);
+    }
+
+    public Store findByEmail(String email) {
+        return storeRepository.findByEmail(email);
     }
 
     public void create(Store store) {
@@ -60,11 +69,20 @@ public class StoreService {
         }
     }
 
+    @Transactional
     public void update(Store store) {
-        storeRepository.save(store);
+        storeRepository.updateData(
+                store.name(),
+                store.alias(),
+                store.password(),
+                store.address(),
+                store.latitude(),
+                store.longitude(),
+                store.email());
     }
 
-    public void delete(Integer id) {
-        storeRepository.deleteById(id);
+    public void delete(String email) {
+        storeRepository.deleteById(storeRepository.findByEmail(email).id());
     }
+
 }

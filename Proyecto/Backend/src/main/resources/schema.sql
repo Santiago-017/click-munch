@@ -14,8 +14,11 @@ CREATE TABLE IF NOT EXISTS stores (
     alias VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
-    address VARCHAR(255) NOT NULL
+    address VARCHAR(255) NOT NULL,
+    latitude DECIMAL(11,8) NOT NULL,
+    longitude decimal(11,8) NOT NULL
     );
+
 
 CREATE TABLE IF NOT EXISTS orders(
     id SERIAL PRIMARY KEY,
@@ -74,4 +77,9 @@ CREATE TABLE IF NOT EXISTS order_desserts(
     dessert_id INT NOT NULL REFERENCES desserts(id)
     );
 
+CREATE TABLE IF NOT EXISTS chefs(
+    id       SERIAL PRIMARY KEY,
+    store_id INT NOT NULL REFERENCES stores (id)
+
+);
 

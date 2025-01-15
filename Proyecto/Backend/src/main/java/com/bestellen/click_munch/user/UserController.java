@@ -1,52 +1,78 @@
 package com.bestellen.click_munch.user;
 
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.http.HttpStatus;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-import java.util.Optional;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
-    private final UserRepository userRepository;
+    private final UserService userService;
 
-    public UserController(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
+
 
     @GetMapping("")
     public List<User> findAll() {
-        return (List<User>) userRepository.findAll();
+        return (List<User>) userService.findAll();
     }
 
     @GetMapping("/{id}")
     public User findById(@PathVariable Integer id) {
-        return userRepository.findById(id)
-                .map(user -> user)
-                .orElseThrow();
+        try {
+            return userService.findById(id);
+        } catch (Exception e) {
+            System.out.println("User not found");
+        }
+        return null;
     }
 
-    @GetMapping("/{username}")
+    @GetMapping("/username/{username}")
     public User findByUsername(@PathVariable String username) {
-        return userRepository.findByUsername(username);
+        try {
+            return userService.findByUsername(username);
+        }
+        catch (Exception e) {
+            System.out.println("User not found");
+        }
+        return null;
     }
 
-    @PostMapping("")
+    @PostMapping("add-user")
+    @ResponseStatus(HttpStatus.CREATED)
     public void create(@RequestBody User user) {
-        userRepository.save(user);
+        if (userService.findByUsername(user.username()) != null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Username already exists");
+        }else if (userService.findByEmail(user.email()) != null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Email already exists");
+        } else if (userService.findByPhone(user.phone()) != null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Phone number already exists");
+        }
+            userService.save(user);
     }
 
-    @PutMapping("/{email}")
-    public void update(@PathVariable String email, @RequestBody User user) {
-        userRepository.save(user);
+    @PutMapping("/{username}")
+    public void update(@PathVariable String username, @RequestBody User user) {
+        if (userService.findByUsername(username)!=null && Objects.equals(username, user.username())) {
+            userService.updateUser(user);
+        } else {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Username does not match");
+        }
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Integer id) {
-        userRepository.deleteById(id);
+        try {
+            userService.deleteById(id);
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User not found");
+        }
     }
-
 
 }
