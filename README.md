@@ -1,6 +1,6 @@
 # CLICK-MUNCH
 
-Descubre, Ordena, Valora: Tu experiencia gastronómica al alcance de un clic-munch.
+Descubre, Ordena, Valora: Tu experiencia gastronómica al alcance de un clic-munch.                                                 
 Click-munch Ingeniería de software 1 - 2024-2 Grupo # 8
 
 # Desarrollado por:
