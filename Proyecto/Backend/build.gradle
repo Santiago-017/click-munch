@@ -23,7 +23,17 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// Dependencias de JUnit 5
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+
+	// Dependencias de Mockito para pruebas unitarias
+	testImplementation 'org.mockito:mockito-core:4.2.0'
+	testImplementation 'org.mockito:mockito-junit-jupiter:4.2.0'
+
+	// Dependencia de Spring Boot para pruebas
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'org.postgresql:postgresql'
 	runtimeOnly 'org.springframework.boot:spring-boot-docker-compose'
