@@ -1,7 +1,7 @@
 package com.bestellen.click_munch.user;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Objects;
 
 @RestController
+@PreAuthorize("hasRole('USER')")
 @RequestMapping("/api/users")
 public class UserController {
     private final UserService userService;
@@ -28,9 +29,8 @@ public class UserController {
         try {
             return userService.findById(id);
         } catch (Exception e) {
-            System.out.println("User not found");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User not found");
         }
-        return null;
     }
 
     @GetMapping("/username/{username}")

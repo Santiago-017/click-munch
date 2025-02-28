@@ -28,7 +28,7 @@ public record User(
         String phone,
         @MappedCollection(idColumn = "user_id")
         Set<Order> orders)
-        //List<Store> Favorites)
+        //Set<Store> Favorites)
         {
 
 }

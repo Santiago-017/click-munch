@@ -66,12 +66,15 @@ public class OrderService {
             orderRepository.save(order);
         }
     }
-
-    public List<Order> getOrdersByStatus(Status status) {
-        return (List<Order>) orderRepository.findByStatus(status);
+    public List<Order> findByStatus(Status status, Integer storeId) {
+        List<Order> ordersByStatus=(List<Order>) orderRepository.findByStatus(status);
+        return ordersByStatus.stream()
+                .filter(order -> order.storeId().equals(storeId))
+                .toList();
+//        return (List<Order>) orderRepository.findByStatus(status);
     }
 
-    public List<Order> getOrdersByStoreId(Integer storeId) {
+    public List<Order> findByStoreId(Integer storeId) {
         return (List<Order>) orderRepository.findByStoreId(storeId);
     }
 

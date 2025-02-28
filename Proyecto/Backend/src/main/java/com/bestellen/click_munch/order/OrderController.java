@@ -3,6 +3,7 @@ package com.bestellen.click_munch.order;
 import com.bestellen.click_munch.menu.DessertService;
 import com.bestellen.click_munch.menu.DrinkService;
 import com.bestellen.click_munch.menu.PlateService;
+import com.bestellen.click_munch.store.StoreService;
 import com.bestellen.click_munch.user.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -16,14 +17,21 @@ import java.util.Objects;
 public class OrderController {
 
     private final OrderService orderService;
+    private final StoreService storeService;
     private final UserService userService;
     private final PlateService plateService;
     private final DrinkService drinkService;
     private final DessertService dessertService;
 
 
-    public OrderController(OrderService orderService, UserService userService, PlateService plateService, DrinkService drinkService, DessertService dessertService) {
+    public OrderController(OrderService orderService,
+                           StoreService storeService,
+                           UserService userService,
+                           PlateService plateService,
+                           DrinkService drinkService,
+                           DessertService dessertService) {
         this.orderService = orderService;
+        this.storeService = storeService;
         this.userService = userService;
         this.plateService = plateService;
         this.drinkService = drinkService;
@@ -39,13 +47,31 @@ public class OrderController {
         }
     }
 
-    @GetMapping("{username}")
-    public List<Order> findByUser(@PathVariable String username){
+    @GetMapping("/user/{username}")
+    public List<Order> findByUsername(@PathVariable String username){
         if(userService.findByUsername(username) != null) {
             Integer userId = userService.findByUsername(username).id();
             return orderService.findByUserId(userId);
         }else throw new ResponseStatusException(HttpStatus.NO_CONTENT, "Username does not Exist");
     }
+
+    @GetMapping("/store/{storeId}")
+    public List<Order> findByStoreId(@PathVariable Integer storeId){
+        if(storeService.findById(storeId) != null){
+            return orderService.findByStoreId(storeId);
+        }
+        throw new ResponseStatusException(HttpStatus.NO_CONTENT, "Store does not Exist");
+    }
+
+    @GetMapping("/status")
+    public List<Order> findByStatus(@RequestParam Status status, @RequestParam Integer storeId){
+        try{
+            return orderService.findByStatus(status, storeId);
+        } catch (Exception e){
+            throw new ResponseStatusException(HttpStatus.NO_CONTENT, "No orders with this status dor this store");
+        }
+    }
+
 
     @PostMapping("/new-order")
     public void create(@RequestBody OrderRequest orderRequest) {
