@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { getRestaurants } from "../services/api";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import SearchBar from "../components/SearchBar"; // Importar la barra de búsqueda
+import SearchBar from "../components/SearchBar";
 
 function Stores() {
-  const [stores, setStores] = useState([]); 
-  const [searchTerm, setSearchTerm] = useState(""); // Estado para la búsqueda
+  const [stores, setStores] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -15,25 +15,27 @@ function Stores() {
     setError(null);
     getRestaurants()
       .then((data) => {
-        console.log("Restaurantes cargados:", data); // Depuración
+        console.log("Restaurantes cargados:", data);
         setStores(data);
       })
       .catch((error) => setError(error.message))
       .finally(() => setLoading(false));
   }, []);
 
-  // Filtrar los restaurantes en tiempo real según `searchTerm`
-  const filteredStores = stores.filter((store) =>
-    store.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    store.address.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // Filtrar restaurantes en tiempo real según la búsqueda
+  const filteredStores = searchTerm
+    ? stores.filter((store) =>
+        store.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        store.address.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    : stores;
 
   if (loading) return <p className="text-center mt-4">Cargando restaurantes...</p>;
   if (error) return <p className="text-danger text-center mt-4">Error: {error}</p>;
 
   return (
     <Container>
-      <h1 className="text-center my-4">Restaurantes</h1>
+      <h1 className="text-center my-4">Click Munch</h1>
 
       {/* Barra de búsqueda */}
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
@@ -46,7 +48,7 @@ function Stores() {
                 <Card.Body>
                   <Card.Title>{store.name}</Card.Title>
                   <Card.Text>{store.address}</Card.Text>
-                  <Button variant="primary" as={Link} to={`/restaurant/${store.id}`}>
+                  <Button variant="primary" as={Link} to={`/store/${store.id}`}>
                     Ver menú
                   </Button>
                 </Card.Body>
