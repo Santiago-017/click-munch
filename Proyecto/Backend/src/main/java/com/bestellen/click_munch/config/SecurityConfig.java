@@ -1,4 +1,4 @@
-package com.bestellen.click_munch.config;
+/*package com.bestellen.click_munch.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -41,3 +41,4 @@ public class SecurityConfig {
 
 
 }
+*/
