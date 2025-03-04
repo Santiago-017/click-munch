@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { getRestaurants } from "../services/api";
 import { Link } from "react-router-dom";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import SearchBar from "../components/SearchBar"; // Importar la barra de búsqueda
 
 function Stores() {
-  const [stores, setStores] = useState([]);
+  const [stores, setStores] = useState([]); 
+  const [searchTerm, setSearchTerm] = useState(""); // Estado para la búsqueda
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -11,24 +14,50 @@ function Stores() {
     setLoading(true);
     setError(null);
     getRestaurants()
-      .then((data) => setStores(data))
+      .then((data) => {
+        console.log("Restaurantes cargados:", data); // Depuración
+        setStores(data);
+      })
       .catch((error) => setError(error.message))
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p>Cargando restaurantes...</p>;
-  if (error) return <p style={{ color: "red" }}>Error: {error}</p>;
+  // Filtrar los restaurantes en tiempo real según `searchTerm`
+  const filteredStores = stores.filter((store) =>
+    store.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    store.address.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  if (loading) return <p className="text-center mt-4">Cargando restaurantes...</p>;
+  if (error) return <p className="text-danger text-center mt-4">Error: {error}</p>;
 
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
-      {stores.map((store) => (
-        <div key={store.id} style={{ border: "1px solid #ccc", padding: "10px", width: "250px" }}>
-          <h3>{store.name}</h3>
-          <p>{store.address}</p>
-          <Link to={`/restaurant/${store.id}`}>Ver menú</Link>
-        </div>
-      ))}
-    </div>
+    <Container>
+      <h1 className="text-center my-4">Restaurantes</h1>
+
+      {/* Barra de búsqueda */}
+      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+
+      <Row>
+        {filteredStores.length > 0 ? (
+          filteredStores.map((store) => (
+            <Col key={store.id} md={4} sm={6} xs={12} className="mb-4">
+              <Card className="shadow">
+                <Card.Body>
+                  <Card.Title>{store.name}</Card.Title>
+                  <Card.Text>{store.address}</Card.Text>
+                  <Button variant="primary" as={Link} to={`/restaurant/${store.id}`}>
+                    Ver menú
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))
+        ) : (
+          <p className="text-center mt-4">No se encontraron restaurantes que coincidan con la búsqueda.</p>
+        )}
+      </Row>
+    </Container>
   );
 }
 
