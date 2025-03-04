@@ -4,6 +4,13 @@
 /node_modules
 /.pnp
 .pnp.js
+/Proyecto/Backend/node_modules
+/Proyecto/Frontend/node_modules
+/Proyecto/Backend/.pnp
+/Proyecto/Frontend/.pnp
+/Proyecto/Backend/.pnp.js
+/Proyecto/Frontend/.pnp.js
+/Proyecto/Backend/.gradle
 
 # testing
 /coverage

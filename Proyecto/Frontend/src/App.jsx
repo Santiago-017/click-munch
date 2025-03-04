@@ -1,15 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Stores from './components/stores';
-import StoreDetail from './components/storeDetail';
+// src/App.jsx
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Stores from "./pages/Stores";
+import StoreDetail from "./pages/StoreDetail";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/stores" element={<Stores />} />
-        <Route path="/stores/:id" element={<StoreDetail />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Stores />} />
+      <Route path="/restaurant/:id" element={<StoreDetail />} />
+    </Routes>
   );
 }
 
