@@ -1,7 +1,8 @@
 package com.bestellen.click_munch.user;
 
 import org.springframework.http.HttpStatus;
-//import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -9,13 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 @RestController
-//@PreAuthorize("hasRole('USER')")
 @RequestMapping("/api/users")
 public class UserController {
     private final UserService userService;
+    private final JdbcUserDetailsManager userDetailsManager;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserController(UserService userService) {
+    public UserController(UserService userService, JdbcUserDetailsManager userDetailsManager, PasswordEncoder passwordEncoder) {
         this.userService = userService;
+        this.userDetailsManager = userDetailsManager;
+        this.passwordEncoder = passwordEncoder;
     }
 
 
@@ -46,15 +50,27 @@ public class UserController {
 
     @PostMapping("add-user")
     @ResponseStatus(HttpStatus.CREATED)
-    public void create(@RequestBody User user) {
-        if (userService.findByUsername(user.username()) != null) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Username already exists");
-        }else if (userService.findByEmail(user.email()) != null) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Email already exists");
-        } else if (userService.findByPhone(user.phone()) != null) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Phone number already exists");
+    public void addUser(@RequestBody UserRequest user) {
+        if (userDetailsManager.userExists(user.username())){
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Username already exists");
         }
-            userService.save(user);
+        else if (userDetailsManager.userExists(user.email())){
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Email already exists");
+        }
+        else if (userDetailsManager.userExists(user.phone())){
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Phone already exists");
+        }
+        String encodedPassword = passwordEncoder.encode(user.password());
+
+        assert userDetailsManager.getJdbcTemplate() != null;
+        userDetailsManager.getJdbcTemplate().update(
+                "insert into users (name, email, username, password, phone, orders) values (?,?,?,?,?,0)",
+                user.name(), user.email(), user.username(), encodedPassword, user.phone()
+        );
+            userDetailsManager.getJdbcTemplate().update(
+                    "insert into authorities (username, authority) values (?,?)",
+                    user.username(), "USER"
+            );
     }
 
     @PutMapping("/{username}")
