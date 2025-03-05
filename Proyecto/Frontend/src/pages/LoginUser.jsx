@@ -1,6 +1,5 @@
-// LoginUser.jsx
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { authAPI } from '../services/api';
 import './Login.css';
 
@@ -50,6 +49,9 @@ export default function LoginUser() {
           </div>
           <button type="submit" className="login-button">Login</button>
         </form>
+        <div className="register-link" style={{ marginTop: '1rem', textAlign: 'center' }}>
+          ¿No tienes una cuenta? <Link to="/registerUser">Regístrate</Link>
+        </div>
       </div>
     </div>
   );
