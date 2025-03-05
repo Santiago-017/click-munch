@@ -41,7 +41,7 @@ function StoreMenu() {
                                             src={`/images/${plate.image}`}
                                             alt={plate.name}
                                             className="rounded-top"
-                                            style={{ height: "150px", objectFit: "cover" }}
+                                            style={{ height: "150px", objectFit: "contain" }}
                                         />
                                         <Card.Body className="text-center p-2">
                                             <Card.Title className="fw-semibold fs-6">{plate.name}</Card.Title>
@@ -67,7 +67,7 @@ function StoreMenu() {
                                             src={`/images/${dessert.image}`}
                                             alt={dessert.name}
                                             className="rounded-top"
-                                            style={{ height: "150px", objectFit: "cover" }}
+                                            style={{ height: "150px", objectFit: "contain" }}
                                         />
                                         <Card.Body className="text-center p-2">
                                             <Card.Title className="fw-semibold fs-6">{dessert.name}</Card.Title>
