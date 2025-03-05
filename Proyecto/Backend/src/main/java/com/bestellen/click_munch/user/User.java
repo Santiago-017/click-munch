@@ -26,6 +26,8 @@ public record User(
         String password,
         @NotEmpty
         String phone,
+        @NotEmpty
+        Boolean enabled,
         @MappedCollection(idColumn = "user_id")
         Set<Order> orders)
         //Set<Store> Favorites)
