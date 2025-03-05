@@ -1,9 +1,11 @@
 import { Navbar, Nav, Container, Button, Offcanvas } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import { useState } from "react";
 import { FaBars, FaShoppingCart } from "react-icons/fa";
 import { useCart } from "../context/CartContext.jsx";
 import CartOffcanvas from "./CartOffcanvas";
+
 
 function NavigationBar() {
     const [showMenu, setShowMenu] = useState(false);
@@ -14,11 +16,27 @@ function NavigationBar() {
     const handleCloseMenu = () => setShowMenu(false);
     const handleCloseCart = () => setShowCart(false);
 
-    // Función para manejar clic en "Inicio"
-    const handleNavigateHome = () => {
-        navigate("/"); // Navega a Inicio
-        handleCloseMenu(); // Cierra el menú desplegable
-    };
+  const handleNavigateHome = () => {
+    navigate("/");
+    handleCloseMenu();
+  };
+
+  // Handle logout by calling the Spring Boot /logout endpoint
+  const handleLogout = async () => {
+    try {
+      await axios.post(
+        "http://localhost:8080/logout",
+        {},
+        { withCredentials: true }
+      );
+      // Clear any client-side auth state
+      localStorage.removeItem("isLoggedIn");
+      setIsLoggedIn(false);
+      navigate("/login");
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  };
 
     return (
         <>

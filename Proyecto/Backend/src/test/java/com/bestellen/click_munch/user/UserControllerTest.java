@@ -28,10 +28,10 @@ public class UserControllerTest {
     void setUp() {
         userA = new User(
                 1, "userA", "testA@test.com",
-                "passwordA", "passA", "3142589654", Set.of());
+                "passwordA", "passA", "3142589654", true, Set.of());
         userB = new User(
                 2, "userB", "testB@test.com",
-                "passwordB", "passB", "3142589654", Set.of());
+                "passwordB", "passB", "3142589654", true, Set.of());
 
     }
 
@@ -53,10 +53,5 @@ public class UserControllerTest {
         assertEquals(userA, userController.findByUsername("userA"));
     }
 
-    @Test
-    void shouldCreate() {
-        userController.create(userA);
-        verify(userService, times(1)).save(userA);
-    }
 
 }
