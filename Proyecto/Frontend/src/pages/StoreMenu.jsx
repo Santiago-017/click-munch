@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getRestaurantById } from "../services/api";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import { useCart } from "../context/CartContext";
 
 function StoreMenu() {
     const { id } = useParams();
+    const { addToCart } = useCart();
     const [menu, setMenu] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -13,10 +15,7 @@ function StoreMenu() {
         setLoading(true);
         setError(null);
         getRestaurantById(id)
-            .then((data) => {
-                console.log("Menú cargado:", data); // Depuración
-                setMenu(data);
-            })
+            .then((data) => setMenu(data))
             .catch((error) => setError(error.message))
             .finally(() => setLoading(false));
     }, [id]);
@@ -27,15 +26,20 @@ function StoreMenu() {
     return (
         <Container className="mt-4">
             <h2 className="text-center my-3 text-primary">Menú del Restaurante</h2>
+
+            {/* Sección de Platos */}
             {menu && (
                 <>
-                    {/* Sección de Platos */}
                     <h4 className="text-center mt-4 mb-2 text-secondary border-bottom pb-1">Platos</h4>
                     <Row className="justify-content-center">
                         {menu.plates.length > 0 ? (
                             menu.plates.map((plate) => (
                                 <Col key={plate.id} lg={3} md={4} sm={6} xs={12} className="mb-3">
-                                    <Card className="shadow-sm border rounded">
+                                    <Card 
+                                        className="shadow-sm border rounded"
+                                        onClick={() => addToCart(plate)} 
+                                        style={{ cursor: "pointer" }}
+                                    >
                                         <Card.Img
                                             variant="top"
                                             src={`/images/${plate.image}`}
@@ -45,7 +49,9 @@ function StoreMenu() {
                                         />
                                         <Card.Body className="text-center p-2">
                                             <Card.Title className="fw-semibold fs-6">{plate.name}</Card.Title>
-                                            <Card.Text className="text-success fw-bold fs-6">Precio: ${plate.price}</Card.Text>
+                                            <Card.Text className="text-success fw-bold fs-6">
+                                                Precio: ${plate.price}
+                                            </Card.Text>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -61,7 +67,11 @@ function StoreMenu() {
                         {menu.desserts.length > 0 ? (
                             menu.desserts.map((dessert) => (
                                 <Col key={dessert.id} lg={3} md={4} sm={6} xs={12} className="mb-3">
-                                    <Card className="shadow-sm border rounded">
+                                    <Card 
+                                        className="shadow-sm border rounded"
+                                        onClick={() => addToCart(dessert)} 
+                                        style={{ cursor: "pointer" }}
+                                    >
                                         <Card.Img
                                             variant="top"
                                             src={`/images/${dessert.image}`}
@@ -71,7 +81,9 @@ function StoreMenu() {
                                         />
                                         <Card.Body className="text-center p-2">
                                             <Card.Title className="fw-semibold fs-6">{dessert.name}</Card.Title>
-                                            <Card.Text className="text-success fw-bold fs-6">Precio: ${dessert.price}</Card.Text>
+                                            <Card.Text className="text-success fw-bold fs-6">
+                                                Precio: ${dessert.price}
+                                            </Card.Text>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -87,7 +99,11 @@ function StoreMenu() {
                         {menu.drinks.length > 0 ? (
                             menu.drinks.map((drink) => (
                                 <Col key={drink.id} lg={3} md={4} sm={6} xs={12} className="mb-3">
-                                    <Card className="shadow-sm border rounded">
+                                    <Card 
+                                        className="shadow-sm border rounded"
+                                        onClick={() => addToCart(drink)} 
+                                        style={{ cursor: "pointer" }}
+                                    >
                                         <Card.Img
                                             variant="top"
                                             src={`/images/${drink.image}`}
@@ -97,7 +113,9 @@ function StoreMenu() {
                                         />
                                         <Card.Body className="text-center p-2">
                                             <Card.Title className="fw-semibold fs-6">{drink.name}</Card.Title>
-                                            <Card.Text className="text-success fw-bold fs-6">Precio: ${drink.price}</Card.Text>
+                                            <Card.Text className="text-success fw-bold fs-6">
+                                                Precio: ${drink.price}
+                                            </Card.Text>
                                         </Card.Body>
                                     </Card>
                                 </Col>
