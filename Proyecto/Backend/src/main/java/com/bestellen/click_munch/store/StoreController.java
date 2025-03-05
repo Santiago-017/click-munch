@@ -1,6 +1,9 @@
 package com.bestellen.click_munch.store;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -14,9 +17,13 @@ import java.util.Objects;
 public class StoreController {
 
     private final StoreService storeService;
+    private final JdbcUserDetailsManager storeDetailsManager;
+    private final PasswordEncoder passwordEncoder;
 
-    public StoreController(StoreService storeService) {
+    public StoreController(StoreService storeService, JdbcUserDetailsManager storeDetailsManager, PasswordEncoder passwordEncoder) {
         this.storeService = storeService;
+        this.storeDetailsManager = storeDetailsManager;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @GetMapping("")
@@ -41,7 +48,7 @@ public class StoreController {
         return storeService.findByName(name);
     }
 
-    @PostMapping("")
+    @PostMapping("/add-store")
     @ResponseStatus(HttpStatus.CREATED)
     public void create(@RequestBody Store store) {
         List<Store> tempStore = storeService.findByName(store.name());
@@ -52,7 +59,20 @@ public class StoreController {
                 }
             });
         }
-        storeService.create(store);
+        if (storeDetailsManager.userExists(store.email())) {
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Email already exists");
+        }
+        String encodedPassword = passwordEncoder.encode(store.password());
+        assert storeDetailsManager.getJdbcTemplate() != null;
+        storeDetailsManager.getJdbcTemplate().update(
+                "insert into stores (name, alias, email, password, address, latitude, longitude) values (?,?,?,?,?,?,?)",
+                store.name(), store.alias(), store.email(), encodedPassword, store.address(), store.latitude(), store.longitude()
+        );
+        storeDetailsManager.getJdbcTemplate().update(
+          "insert into authorities (username, authority) values (?,?)",
+          store.email(),  "STORE_ADMIN"
+        );
+
     }
 
     @PostMapping("/add-menu")

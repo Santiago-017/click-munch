@@ -16,6 +16,7 @@ public interface UserRepository extends CrudRepository<User, Integer> {
     User findByEmail(String email);
     User findByPhone(String phone);
 
+
     default void createAll(List<User> users){
         this.saveAll(users);
     }

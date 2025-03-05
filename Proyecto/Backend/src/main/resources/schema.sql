@@ -5,8 +5,16 @@ CREATE TABLE IF NOT EXISTS users (
     username VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     phone VARCHAR(255) NOT NULL,
+    enabled BOOLEAN NOT NULL DEFAULT TRUE,
     orders INT NOT NULL DEFAULT 0
     );
+
+CREATE TABLE IF NOT EXISTS authorities (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    authority VARCHAR(50) NOT NULL
+    );
+
 
 CREATE TABLE IF NOT EXISTS stores (
     id SERIAL PRIMARY KEY,
@@ -16,7 +24,8 @@ CREATE TABLE IF NOT EXISTS stores (
     password VARCHAR(255) NOT NULL,
     address VARCHAR(255) NOT NULL,
     latitude DECIMAL(11,8) NOT NULL,
-    longitude decimal(11,8) NOT NULL
+    longitude decimal(11,8) NOT NULL,
+    enabled BOOLEAN NOT NULL DEFAULT TRUE
     );
 
 
