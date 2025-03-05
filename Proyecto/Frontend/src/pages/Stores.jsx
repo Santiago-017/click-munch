@@ -35,7 +35,6 @@ function Stores() {
 
   return (
     <Container>
-      <h1 className="text-center my-4">Click Munch</h1>
 
       {/* Barra de búsqueda */}
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
