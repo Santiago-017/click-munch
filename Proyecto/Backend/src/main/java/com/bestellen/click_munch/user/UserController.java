@@ -50,7 +50,7 @@ public class UserController {
 
     @PostMapping("add-user")
     @ResponseStatus(HttpStatus.CREATED)
-    public void addUser(@RequestBody UserRequest user) {
+    public void create(@RequestBody UserRequest user) {
         if (userDetailsManager.userExists(user.username())){
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Username already exists");
         }
