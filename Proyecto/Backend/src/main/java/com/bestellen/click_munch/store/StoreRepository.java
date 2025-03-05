@@ -19,13 +19,14 @@ public interface StoreRepository extends CrudRepository<Store, Integer> {
     }
 
     @Modifying
-    @Query("UPDATE stores SET name = :name, alias = :alias, password = :password, address = :address, latitude = :latitude, longitude = :longitude WHERE email = :email")
+    @Query("UPDATE stores SET name = :name, alias = :alias, password = :password, address = :address, latitude = :latitude, longitude = :longitude, logo = :logo WHERE email = :email")
     void updateData(@Param("name") String name,
                     @Param("alias") String alias,
                     @Param("password") String password,
                     @Param("address") String address,
                     @Param("latitude") Double latitude,
                     @Param("longitude") Double longitude,
+                    @Param("logo") String logo,
                     @Param("email") String email
                     );
 

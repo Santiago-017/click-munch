@@ -25,7 +25,8 @@ CREATE TABLE IF NOT EXISTS stores (
     address VARCHAR(255) NOT NULL,
     latitude DECIMAL(11,8) NOT NULL,
     longitude decimal(11,8) NOT NULL,
-    enabled BOOLEAN NOT NULL DEFAULT TRUE
+    enabled BOOLEAN NOT NULL DEFAULT TRUE,
+    logo VARCHAR(255) NOT NULL
     );
 
 

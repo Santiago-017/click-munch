@@ -65,8 +65,8 @@ public class StoreController {
         String encodedPassword = passwordEncoder.encode(store.password());
         assert storeDetailsManager.getJdbcTemplate() != null;
         storeDetailsManager.getJdbcTemplate().update(
-                "insert into stores (name, alias, email, password, address, latitude, longitude) values (?,?,?,?,?,?,?)",
-                store.name(), store.alias(), store.email(), encodedPassword, store.address(), store.latitude(), store.longitude()
+                "insert into stores (name, alias, email, password, address, latitude, longitude, logo) values (?,?,?,?,?,?,?,?)",
+                store.name(), store.alias(), store.email(), encodedPassword, store.address(), store.latitude(), store.longitude(), store.logo()
         );
         storeDetailsManager.getJdbcTemplate().update(
           "insert into authorities (username, authority) values (?,?)",

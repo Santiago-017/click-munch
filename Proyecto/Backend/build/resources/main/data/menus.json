@@ -87,61 +87,61 @@
       "name": "Coca-Cola Regular",
       "description": "...",
       "price": 4900.00,
-      "image": "avena.jpg"
+      "image": "cokedonalds.png"
     },
     {
       "name": "Coca-Cola Mediana",
       "description": "...",
       "price": 5500.00,
-      "image": "avena.jpg"
+      "image": "cokedonalds.png"
     },
     {
       "name": "Coca-Cola Grande",
       "description": "...",
       "price": 7500.00,
-      "image": "avena.jpg"
+      "image": "cokedonalds.png"
     },
     {
       "name": "Coca-Cola Zero Regular",
       "description": "...",
       "price": 4900.00,
-      "image": "chocolate.jpg"
+      "image": "cokezerodonalds.png"
     },
     {
       "name": "Coca-Cola Zero Mediana",
       "description": "...",
       "price": 5500.00,
-      "image": "chocolate.jpg"
+      "image": "cokezerodonalds.png"
     },
     {
       "name": "Coca-Cola Zero Grande",
       "description": "...",
       "price": 7500.00,
-      "image": "chocolate.jpg"
+      "image": "cokezerodonalds.png"
     },
     {
       "name": "Sprite Regular",
       "description": "...",
       "price": 4900.00,
-      "image": "jugo.jpg"
+      "image": "spritedonalds.png"
     },
     {
       "name": "Sprite Mediana",
       "description": "...",
       "price": 5500.00,
-      "image": "jugo.jpg"
+      "image": "spritedonalds.png"
     },
     {
       "name": "Sprite Grande",
       "description": "...",
       "price": 7500.00,
-      "image": "jugo.jpg"
+      "image": "spritedonalds.png"
     },
     {
       "name": "Vaso de agua",
       "description": "...",
       "price": 3000.00,
-      "image": "cafe.jpg"
+      "image": "waterdonalds.png"
     },
     {
       "name": "Jugo Del Valle",
@@ -155,31 +155,31 @@
       "name": "McFlurry™ Oreo",
       "description": "...",
       "price": 10500.00,
-      "image": "pielimon.jpg"
+      "image": "flurryoreo.png"
     },
     {
       "name": "McFlurry™ M&M's",
       "description": "...",
       "price": 10500.00,
-      "image": "tortachocolate.jpg"
+      "image": "flurrymym.png"
     },
     {
       "name": "Sundae Chocolate",
       "description": "...",
       "price": 6900.00,
-      "image": "helado.jpg"
+      "image": "sundaechoc.png"
     },
     {
       "name": "Cono Vainilla",
       "description": "...",
       "price": 3900.00,
-      "image": "gelatina.jpg"
+      "image": "vainilladonalds.png"
     },
     {
       "name": "Cono Oreo",
       "description": "...",
       "price": 4900.00,
-      "image": "flan.jpg"
+      "image": "oreodonalds.png"
     },
     {
       "name": "McColoso",
@@ -191,13 +191,13 @@
       "name": "Sundae Mora",
       "description": "...",
       "price": 6900.00,
-      "image": "cheesecake.jpg"
+      "image": "sundaemor.png"
     },
     {
       "name": "Sundae Arequipe",
       "description": "...",
       "price": 6900.00,
-      "image": "cheesecake.jpg"
+      "image": "sundaeareq.png"
     }
   ]
 },
@@ -207,126 +207,198 @@
         {
           "name": "Big Mac",
           "description": "...",
-          "price": 5500.00,
-          "image": "pancakes.jpg"
+          "price": 21900.00,
+          "image": "bigmac.png"
         },
         {
           "name": "McBacon",
           "description": "...",
-          "price": 4500.00,
-          "image": "tortilla.jpg"
+          "price": 21900.00,
+          "image": "mcbacon.png"
         },
         {
           "name": "Cuarto de Libra con Queso",
           "description": "...",
-          "price": 5000.00,
-          "image": "huevos.jpg"
+          "price": 25900.00,
+          "image": "cuartoqueso.png"
         },
         {
           "name": "McNifica",
           "description": "...",
-          "price": 4000.00,
-          "image": "arepas.jpg"
+          "price": 23900.00,
+          "image": "mcnifica.png"
         },
         {
           "name": "Hamburguesa con Queso",
           "description": "...",
-          "price": 6000.00,
-          "image": "sandwich.jpg"
+          "price": 8900.00,
+          "image": "hamquesomc.png"
         },
         {
           "name": "DOBLE BIG MAC",
           "description": "...",
-          "price": 7000.00,
-          "image": "ensalada.jpg"
+          "price": 38900.00,
+          "image": "bigmac2.png"
         },
         {
           "name": "Doble Big Mac Bacon",
           "description": "...",
-          "price": 3000.00,
-          "image": "frijoles.jpg"
+          "price": 41900.00,
+          "image": "bigmacbacon.png"
         },
         {
-          "name": "Cajita Feliz",
+          "name": "Cajita Feliz Hamburguesa",
           "description": "...",
-          "price": 3000.00,
-          "image": "frijoles.jpg"
+          "price": 21500.00,
+          "image": "feliz.jpeg"
         },
         {
           "name": "Pollo McCrispy Classic",
           "description": "...",
-          "price": 3000.00,
-          "image": "frijoles.jpg"
+          "price": 21900.00,
+          "image": "mccrispy.png"
+        },
+        {
+          "name": "Club House con Carne",
+          "description": "...",
+          "price": 30900.00,
+          "image": "clubhouse.png"
+        },
+        {
+          "name": "Crispy Onion Carne",
+          "description": "...",
+          "price": 30900.00,
+          "image": "crispyonion.png"
+        },
+        {
+          "name": "McNuggets™ 10 unidades",
+          "description": "...",
+          "price": 22900.00,
+          "image": "mcnuggets.png"
+        },
+        {
+          "name": "6 Piezas de Pollo",
+          "description": "...",
+          "price": 27900.00,
+          "image": "6pollo.png"
         }
       ],
       "drinks": [
         {
-          "name": "Coca-Cola",
+          "name": "Coca-Cola Regular",
+          "description": "...",
+          "price": 4900.00,
+          "image": "cokedonalds.png"
+        },
+        {
+          "name": "Coca-Cola Mediana",
+          "description": "...",
+          "price": 5500.00,
+          "image": "cokedonalds.png"
+        },
+        {
+          "name": "Coca-Cola Grande",
+          "description": "...",
+          "price": 7500.00,
+          "image": "cokedonalds.png"
+        },
+        {
+          "name": "Coca-Cola Zero Regular",
+          "description": "...",
+          "price": 4900.00,
+          "image": "cokezerodonalds.png"
+        },
+        {
+          "name": "Coca-Cola Zero Mediana",
+          "description": "...",
+          "price": 5500.00,
+          "image": "cokezerodonalds.png"
+        },
+        {
+          "name": "Coca-Cola Zero Grande",
+          "description": "...",
+          "price": 7500.00,
+          "image": "cokezerodonalds.png"
+        },
+        {
+          "name": "Sprite Regular",
+          "description": "...",
+          "price": 4900.00,
+          "image": "spritedonalds.png"
+        },
+        {
+          "name": "Sprite Mediana",
+          "description": "...",
+          "price": 5500.00,
+          "image": "spritedonalds.png"
+        },
+        {
+          "name": "Sprite Grande",
+          "description": "...",
+          "price": 7500.00,
+          "image": "spritedonalds.png"
+        },
+        {
+          "name": "Vaso de agua",
           "description": "...",
           "price": 3000.00,
-          "image": "avena.jpg"
-        },
-        {
-          "name": "Coca-Cola Zero",
-          "description": "...",
-          "price": 2500.00,
-          "image": "chocolate.jpg"
-        },
-        {
-          "name": "Sprite",
-          "description": "...",
-          "price": 2000.00,
-          "image": "jugo.jpg"
+          "image": "waterdonalds.png"
         },
         {
           "name": "Jugo Del Valle",
           "description": "...",
-          "price": 2000.00,
-          "image": "cafe.jpg"
+          "price": 5900.00,
+          "image": "delvalle.png"
         }
       ],
       "desserts": [
         {
           "name": "McFlurry™ Oreo",
           "description": "...",
-          "price": 5000.00,
-          "image": "pielimon.jpg"
+          "price": 10500.00,
+          "image": "flurryoreo.png"
         },
         {
           "name": "McFlurry™ M&M's",
           "description": "...",
-          "price": 6000.00,
-          "image": "tortachocolate.jpg"
+          "price": 10500.00,
+          "image": "flurrymym.png"
         },
         {
           "name": "Sundae Chocolate",
           "description": "...",
-          "price": 4000.00,
-          "image": "helado.jpg"
+          "price": 6900.00,
+          "image": "sundaechoc.png"
         },
         {
-          "name": "Cono Mixto",
+          "name": "Cono Vainilla",
           "description": "...",
-          "price": 3000.00,
-          "image": "gelatina.jpg"
+          "price": 3900.00,
+          "image": "vainilladonalds.png"
         },
         {
           "name": "Cono Oreo",
           "description": "...",
-          "price": 3500.00,
-          "image": "flan.jpg"
+          "price": 4900.00,
+          "image": "oreodonalds.png"
         },
         {
-          "name": "Manzana",
+          "name": "McColoso",
           "description": "...",
-          "price": 7000.00,
-          "image": "tiramisu.jpg"
+          "price": 7900.00,
+          "image": "coloso.png"
         },
         {
           "name": "Sundae Mora",
           "description": "...",
-          "price": 8000.00,
-          "image": "cheesecake.jpg"
+          "price": 6900.00,
+          "image": "sundaemor.png"
+        },
+        {
+          "name": "Sundae Arequipe",
+          "description": "...",
+          "price": 6900.00,
+          "image": "sundaeareq.png"
         }
       ]
     },
@@ -336,126 +408,126 @@
         {
           "name": "WHOPPER®",
           "description": "...",
-          "price": 5000.00,
-          "image": "patacones.jpg"
+          "price": 27900.00,
+          "image": "whopper.png"
         },
         {
           "name": "WHOPPER® Queso",
           "description": "...",
-          "price": 8000.00,
-          "image": "sancocho.jpg"
+          "price": 29900.00,
+          "image": "whopperq.png"
         },
         {
           "name": "WHOPPER® Jr.",
           "description": "...",
-          "price": 10000.00,
-          "image": "ajiaco.jpg"
+          "price": 22900.00,
+          "image": "whopperjr.png"
         },
         {
           "name": "Megastacker Doble",
           "description": "...",
-          "price": 3000.00,
-          "image": "frijoles.jpg"
+          "price": 38900.00,
+          "image": "megadoble.png"
         },
         {
           "name": "Irresistible King",
           "description": "...",
-          "price": 4000.00,
-          "image": "arroz.jpg"
+          "price": 39900.00,
+          "image": "kingirr.png"
         },
         {
           "name": "WHOPPER® Veggie",
           "description": "...",
-          "price": 9000.00,
-          "image": "pescado.jpg"
+          "price": 29900.00,
+          "image": "whopperveg.png"
         },
         {
           "name": "King Jr Hamburguesa",
           "description": "...",
-          "price": 8000.00,
-          "image": "pasta.jpg"
+          "price": 21500.00,
+          "image": "kingjr.png"
         },
         {
           "name": "BK Queso",
           "description": "...",
-          "price": 8000.00,
-          "image": "pasta.jpg"
+          "price": 17900.00,
+          "image": "bkqueso.png"
         },
         {
           "name": "BK Doble Queso tocineta",
           "description": "...",
-          "price": 8000.00,
-          "image": "pasta.jpg"
+          "price": 23900.00,
+          "image": "bkquesod.png"
         }
       ],
       "drinks": [
         {
           "name": "Pepsi 400 Ml",
           "description": "...",
-          "price": 2000.00,
-          "image": "gaseosa.jpg"
+          "price": 8000.00,
+          "image": "pepsi.webp"
         },
         {
           "name": "Manzana 400 Ml",
           "description": "...",
-          "price": 2000.00,
-          "image": "jugo.jpg"
+          "price": 8000.00,
+          "image": "manzana.webp"
         },
         {
           "name": "Colombiana 400 Ml",
           "description": "...",
-          "price": 3000.00,
-          "image": "cerveza.jpg"
+          "price": 8000.00,
+          "image": "colombiana.webp"
         },
         {
           "name": "Agua Cristal",
           "description": "...",
-          "price": 5000.00,
-          "image": "vino.jpg"
+          "price": 4000.00,
+          "image": "agua.webp"
         },
         {
           "name": "Jugo Hit de Mango en Cajita",
           "description": "...",
-          "price": 5000.00,
-          "image": "vino.jpg"
+          "price": 6000.00,
+          "image": "mango.webp"
         }
       ],
       "desserts": [
         {
           "name": "Cono Sencillo",
           "description": "...",
-          "price": 5000.00,
-          "image": "pielimon.jpg"
+          "price": 3500.00,
+          "image": "conobk.png"
         },
         {
           "name": "Cono Crocante",
           "description": "...",
           "price": 6000.00,
-          "image": "tortachocolate.jpg"
+          "image": "conocrobk.png"
         },
         {
           "name": "Sundae Frutos Rojos",
           "description": "...",
-          "price": 4000.00,
-          "image": "helado.jpg"
+          "price": 7900.00,
+          "image": "sundaefrbk.png"
         },
         {
           "name": "King Mix Oreo",
           "description": "...",
-          "price": 3000.00,
-          "image": "gelatina.jpg"
+          "price": 10900.00,
+          "image": "kingmixor.png"
         },
         {
           "name": "Hershey's® Pie",
           "description": "...",
-          "price": 3500.00,
-          "image": "flan.jpg"
+          "price": 15900.00,
+          "image": "herpie.png"
         },
         {
           "name": "Malteada Vainilla",
           "description": "...",
-          "price": 8000.00,
-          "image": "cheesecake.jpg"
+          "price": 12900.00,
+          "image": "maltvanbk.png"
         }
       ]
     },
@@ -463,82 +535,412 @@
       "storeId": 4,
       "plates": [
         {
-          "name": "Pizza",
+          "name": "WHOPPER®",
           "description": "...",
-          "price": 12000.00,
-          "image": "pizza.jpg"
+          "price": 27900.00,
+          "image": "whopper.png"
         },
         {
-          "name": "Pasta",
+          "name": "WHOPPER® Queso",
+          "description": "...",
+          "price": 29900.00,
+          "image": "whopperq.png"
+        },
+        {
+          "name": "WHOPPER® Jr.",
+          "description": "...",
+          "price": 22900.00,
+          "image": "whopperjr.png"
+        },
+        {
+          "name": "Megastacker Doble",
+          "description": "...",
+          "price": 38900.00,
+          "image": "megadoble.png"
+        },
+        {
+          "name": "Irresistible King",
+          "description": "...",
+          "price": 39900.00,
+          "image": "kingirr.png"
+        },
+        {
+          "name": "WHOPPER® Veggie",
+          "description": "...",
+          "price": 29900.00,
+          "image": "whopperveg.png"
+        },
+        {
+          "name": "King Jr Hamburguesa",
+          "description": "...",
+          "price": 21500.00,
+          "image": "kingjr.png"
+        },
+        {
+          "name": "BK Queso",
+          "description": "...",
+          "price": 17900.00,
+          "image": "bkqueso.png"
+        },
+        {
+          "name": "BK Doble Queso tocineta",
+          "description": "...",
+          "price": 23900.00,
+          "image": "bkquesod.png"
+        }
+      ],
+      "drinks": [
+        {
+          "name": "Pepsi 400 Ml",
           "description": "...",
           "price": 8000.00,
-          "image": "pasta.jpg"
+          "image": "pepsi.webp"
         },
         {
-          "name": "Ensalada",
+          "name": "Manzana 400 Ml",
+          "description": "...",
+          "price": 8000.00,
+          "image": "manzana.webp"
+        },
+        {
+          "name": "Colombiana 400 Ml",
+          "description": "...",
+          "price": 8000.00,
+          "image": "colombiana.webp"
+        },
+        {
+          "name": "Agua Cristal",
+          "description": "...",
+          "price": 4000.00,
+          "image": "agua.webp"
+        },
+        {
+          "name": "Jugo Hit de Mango en Cajita",
+          "description": "...",
+          "price": 6000.00,
+          "image": "mango.webp"
+        }
+      ],
+      "desserts": [
+        {
+          "name": "Cono Sencillo",
+          "description": "...",
+          "price": 3500.00,
+          "image": "conobk.png"
+        },
+        {
+          "name": "Cono Crocante",
+          "description": "...",
+          "price": 6000.00,
+          "image": "conocrobk.png"
+        },
+        {
+          "name": "Sundae Frutos Rojos",
+          "description": "...",
+          "price": 7900.00,
+          "image": "sundaefrbk.png"
+        },
+        {
+          "name": "King Mix Oreo",
+          "description": "...",
+          "price": 10900.00,
+          "image": "kingmixor.png"
+        },
+        {
+          "name": "Hershey's® Pie",
+          "description": "...",
+          "price": 15900.00,
+          "image": "herpie.png"
+        },
+        {
+          "name": "Malteada Vainilla",
+          "description": "...",
+          "price": 12900.00,
+          "image": "maltvanbk.png"
+        }
+      ]
+    },
+    {
+      "storeId": 5,
+      "plates": [
+        {
+          "name": "Sopa de Mondongo",
+          "description": "...",
+          "price": 5500.00,
+          "image": "pancakes.jpg"
+        },
+        {
+          "name": "Sopa de Ajiaco",
+          "description": "...",
+          "price": 4500.00,
+          "image": "tortilla.jpg"
+        },
+        {
+          "name": "Frijolada",
+          "description": "...",
+          "price": 5000.00,
+          "image": "huevos.jpg"
+        },
+        {
+          "name": "Bandeja Paisa",
+          "description": "...",
+          "price": 4000.00,
+          "image": "arepas.jpg"
+        },
+        {
+          "name": "Carne Asada",
+          "description": "...",
+          "price": 6000.00,
+          "image": "sandwich.jpg"
+        },
+        {
+          "name": "Pechuga Asada",
           "description": "...",
           "price": 7000.00,
           "image": "ensalada.jpg"
         },
         {
-          "name": "Pollo frito",
+          "name": "Lomo de Cerdo",
           "description": "...",
-          "price": 9000.00,
-          "image": "pollofrito.jpg"
+          "price": 3000.00,
+          "image": "frijoles.jpg"
         },
         {
-          "name": "Hamburguesa",
+          "name": "Costillitas BBQ",
           "description": "...",
-          "price": 10000.00,
-          "image": "hamburguesa.jpg"
+          "price": 3000.00,
+          "image": "frijoles.jpg"
         },
         {
-          "name": "Perro caliente",
+          "name": "Mixta Carne y Pechuga",
           "description": "...",
-          "price": 8000.00,
-          "image": "perrocaliente.jpg"
+          "price": 3000.00,
+          "image": "frijoles.jpg"
         },
         {
-          "name": "Papas fritas",
+          "name": "Pechuga Gratinada",
           "description": "...",
-          "price": 5000.00,
-          "image": "papasfritas.jpg"
+          "price": 3000.00,
+          "image": "frijoles.jpg"
+        },
+        {
+          "name": "Bistec a Caballo",
+          "description": "...",
+          "price": 3000.00,
+          "image": "frijoles.jpg"
+        },
+        {
+          "name": "Cazuela Montañera",
+          "description": "...",
+          "price": 3000.00,
+          "image": "frijoles.jpg"
+        },
+        {
+          "name": "Chicharron Criollo",
+          "description": "...",
+          "price": 3000.00,
+          "image": "frijoles.jpg"
         }
       ],
       "drinks": [
         {
-          "name": "Gaseosa",
+          "name": "Coca Cola Original 400 ml",
           "description": "...",
-          "price": 2000.00,
-          "image": "gaseosa.jpg"
+          "price": 3000.00,
+          "image": "avena.jpg"
         },
         {
-          "name": "Jugo de naranja",
+          "name": "Coca-Cola Sin Azúcar 500 ml",
+          "description": "...",
+          "price": 3000.00,
+          "image": "avena.jpg"
+        },
+        {
+          "name": "Sprite 400 ml",
+          "description": "...",
+          "price": 3000.00,
+          "image": "avena.jpg"
+        },
+        {
+          "name": "Quatro Original 400ML",
+          "description": "...",
+          "price": 2500.00,
+          "image": "chocolate.jpg"
+        },
+        {
+          "name": "Manantial Sin Gas 600 ml",
+          "description": "...",
+          "price": 2500.00,
+          "image": "chocolate.jpg"
+        },
+        {
+          "name": "Jugo Natural",
+          "description": "...",
+          "price": 2500.00,
+          "image": "chocolate.jpg"
+        },
+        {
+          "name": "Limonada Natural",
           "description": "...",
           "price": 2000.00,
           "image": "jugo.jpg"
         },
         {
-          "name": "Cerveza",
+          "name": "Club Colombia Dorada 330 ml",
           "description": "...",
-          "price": 3000.00,
-          "image": "cerveza.jpg"
+          "price": 2000.00,
+          "image": "jugo.jpg"
         },
         {
-          "name": "Vino",
+          "name": "Aguila 330 ml",
           "description": "...",
-          "price": 5000.00,
-          "image": "vino.jpg"
+          "price": 2000.00,
+          "image": "jugo.jpg"
         }
       ],
       "desserts": [
         {
-          "name": "Pie de limón",
+          "name": "Torta de Chocolate",
+          "description": "...",
+          "price": 2000.00,
+          "image": "jugo.jpg"
+        }
+      ]
+    },
+    {
+      "storeId": 6,
+      "plates": [
+        {
+          "name": "Chorreo de Quevedo",
+          "description": "...",
+          "price": 5500.00,
+          "image": "pancakes.jpg"
+        },
+        {
+          "name": "la Sinclar",
+          "description": "...",
+          "price": 4500.00,
+          "image": "tortilla.jpg"
+        },
+        {
+          "name": "Bar Bacoa",
           "description": "...",
           "price": 5000.00,
-          "image": "pielimon.jpg"
+          "image": "huevos.jpg"
+        },
+        {
+          "name": "The One",
+          "description": "...",
+          "price": 4000.00,
+          "image": "arepas.jpg"
+        },
+        {
+          "name": "Jalapeño Blue",
+          "description": "...",
+          "price": 6000.00,
+          "image": "sandwich.jpg"
+        },
+        {
+          "name": "Sandwich Gringo Grilled",
+          "description": "...",
+          "price": 7000.00,
+          "image": "ensalada.jpg"
+        },
+        {
+          "name": "Sándwich Mucho Queso y Cebolla",
+          "description": "...",
+          "price": 3000.00,
+          "image": "frijoles.jpg"
+        },
+        {
+          "name": "Sandwich Bombay Grilled Chicken",
+          "description": "...",
+          "price": 3000.00,
+          "image": "frijoles.jpg"
+        },
+        {
+          "name": "Alas Bufalo de Rocoto",
+          "description": "...",
+          "price": 3000.00,
+          "image": "frijoles.jpg"
+        },
+        {
+          "name": "Alas Bbq Hecha en Casa",
+          "description": "...",
+          "price": 3000.00,
+          "image": "frijoles.jpg"
+        },
+        {
+          "name": "Alas Achinadas",
+          "description": "...",
+          "price": 3000.00,
+          "image": "frijoles.jpg"
         }
-        ]
+      ],
+      "drinks": [
+        {
+          "name": "Heineken 300 ml",
+          "description": "...",
+          "price": 3000.00,
+          "image": "avena.jpg"
+        },
+        {
+          "name": "Stella Artois 335 ml",
+          "description": "...",
+          "price": 3000.00,
+          "image": "avena.jpg"
+        },
+        {
+          "name": "Soda Piña & Hierbabuena",
+          "description": "...",
+          "price": 3000.00,
+          "image": "avena.jpg"
+        },
+        {
+          "name": "Ginger 300ml",
+          "description": "...",
+          "price": 2500.00,
+          "image": "chocolate.jpg"
+        },
+        {
+          "name": "Agua Crealli 330ml",
+          "description": "...",
+          "price": 2500.00,
+          "image": "chocolate.jpg"
+        },
+        {
+          "name": "Limonada de Coco Artesanal",
+          "description": "...",
+          "price": 2500.00,
+          "image": "chocolate.jpg"
+        },
+        {
+          "name": "Malteada",
+          "description": "...",
+          "price": 2000.00,
+          "image": "jugo.jpg"
+        },
+        {
+          "name": "Coca-cola Sabor Original",
+          "description": "...",
+          "price": 2000.00,
+          "image": "jugo.jpg"
+        }
+      ],
+      "desserts": [
+        {
+          "name": "Torta de Chocolate",
+          "description": "...",
+          "price": 2000.00,
+          "image": "jugo.jpg"
+        },
+        {
+          "name": "Tiramisu Oreo",
+          "description": "...",
+          "price": 2000.00,
+          "image": "jugo.jpg"
+        }
+      ]
     }
 
 
