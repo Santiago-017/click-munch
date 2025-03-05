@@ -4,115 +4,199 @@
   "storeId": 1,
   "plates": [
     {
-      "name": "Pancakes",
+      "name": "Big Mac",
       "description": "...",
-      "price": 5500.00,
-      "image": "pancakes.jpg"
+      "price": 21900.00,
+      "image": "bigmac.png"
     },
     {
-      "name": "Tortilla",
+      "name": "McBacon",
       "description": "...",
-      "price": 4500.00,
-      "image": "tortilla.jpg"
+      "price": 21900.00,
+      "image": "mcbacon.png"
     },
     {
-      "name": "Huevos",
+      "name": "Cuarto de Libra con Queso",
       "description": "...",
-      "price": 5000.00,
-      "image": "huevos.jpg"
+      "price": 25900.00,
+      "image": "cuartoqueso.png"
     },
     {
-      "name": "Arepas",
+      "name": "McNifica",
       "description": "...",
-      "price": 4000.00,
-      "image": "arepas.jpg"
+      "price": 23900.00,
+      "image": "mcnifica.png"
     },
     {
-      "name": "Sandwich",
+      "name": "Hamburguesa con Queso",
       "description": "...",
-      "price": 6000.00,
-      "image": "sandwich.jpg"
+      "price": 8900.00,
+      "image": "hamquesomc.png"
     },
     {
-      "name": "Ensalada",
+      "name": "DOBLE BIG MAC",
       "description": "...",
-      "price": 7000.00,
-      "image": "ensalada.jpg"
+      "price": 38900.00,
+      "image": "bigmac2.png"
     },
     {
-      "name": "Frijoles",
+      "name": "Doble Big Mac Bacon",
       "description": "...",
-      "price": 3000.00,
-      "image": "frijoles.jpg"
+      "price": 41900.00,
+      "image": "bigmacbacon.png"
+    },
+    {
+      "name": "Cajita Feliz Hamburguesa",
+      "description": "...",
+      "price": 21500.00,
+      "image": "feliz.jpeg"
+    },
+    {
+      "name": "Pollo McCrispy Classic",
+      "description": "...",
+      "price": 21900.00,
+      "image": "mccrispy.png"
+    },
+    {
+      "name": "Club House con Carne",
+      "description": "...",
+      "price": 30900.00,
+      "image": "clubhouse.png"
+    },
+    {
+      "name": "Crispy Onion Carne",
+      "description": "...",
+      "price": 30900.00,
+      "image": "crispyonion.png"
+    },
+    {
+      "name": "McNuggets™ 10 unidades",
+      "description": "...",
+      "price": 22900.00,
+      "image": "mcnuggets.png"
+    },
+    {
+      "name": "6 Piezas de Pollo",
+      "description": "...",
+      "price": 27900.00,
+      "image": "6pollo.png"
     }
   ],
   "drinks": [
     {
-      "name": "Avena",
+      "name": "Coca-Cola Regular",
       "description": "...",
-      "price": 3000.00,
+      "price": 4900.00,
       "image": "avena.jpg"
     },
     {
-      "name": "Chocolate",
+      "name": "Coca-Cola Mediana",
       "description": "...",
-      "price": 2500.00,
+      "price": 5500.00,
+      "image": "avena.jpg"
+    },
+    {
+      "name": "Coca-Cola Grande",
+      "description": "...",
+      "price": 7500.00,
+      "image": "avena.jpg"
+    },
+    {
+      "name": "Coca-Cola Zero Regular",
+      "description": "...",
+      "price": 4900.00,
       "image": "chocolate.jpg"
     },
     {
-      "name": "Jugo de naranja",
+      "name": "Coca-Cola Zero Mediana",
       "description": "...",
-      "price": 2000.00,
+      "price": 5500.00,
+      "image": "chocolate.jpg"
+    },
+    {
+      "name": "Coca-Cola Zero Grande",
+      "description": "...",
+      "price": 7500.00,
+      "image": "chocolate.jpg"
+    },
+    {
+      "name": "Sprite Regular",
+      "description": "...",
+      "price": 4900.00,
       "image": "jugo.jpg"
     },
     {
-      "name": "Café",
+      "name": "Sprite Mediana",
       "description": "...",
-      "price": 2000.00,
+      "price": 5500.00,
+      "image": "jugo.jpg"
+    },
+    {
+      "name": "Sprite Grande",
+      "description": "...",
+      "price": 7500.00,
+      "image": "jugo.jpg"
+    },
+    {
+      "name": "Vaso de agua",
+      "description": "...",
+      "price": 3000.00,
       "image": "cafe.jpg"
+    },
+    {
+      "name": "Jugo Del Valle",
+      "description": "...",
+      "price": 5900.00,
+      "image": "delvalle.png"
     }
   ],
   "desserts": [
     {
-      "name": "Pie de limón",
+      "name": "McFlurry™ Oreo",
       "description": "...",
-      "price": 5000.00,
+      "price": 10500.00,
       "image": "pielimon.jpg"
     },
     {
-      "name": "Torta de chocolate",
+      "name": "McFlurry™ M&M's",
       "description": "...",
-      "price": 6000.00,
+      "price": 10500.00,
       "image": "tortachocolate.jpg"
     },
     {
-      "name": "Helado",
+      "name": "Sundae Chocolate",
       "description": "...",
-      "price": 4000.00,
+      "price": 6900.00,
       "image": "helado.jpg"
     },
     {
-      "name": "Gelatina",
+      "name": "Cono Vainilla",
       "description": "...",
-      "price": 3000.00,
+      "price": 3900.00,
       "image": "gelatina.jpg"
     },
     {
-      "name": "Flan",
+      "name": "Cono Oreo",
       "description": "...",
-      "price": 3500.00,
+      "price": 4900.00,
       "image": "flan.jpg"
     },
     {
-      "name": "Tiramisú",
+      "name": "McColoso",
       "description": "...",
-      "price": 7000.00,
-      "image": "tiramisu.jpg"
+      "price": 7900.00,
+      "image": "coloso.png"
     },
     {
-      "name": "Cheesecake",
+      "name": "Sundae Mora",
       "description": "...",
-      "price": 8000.00,
+      "price": 6900.00,
+      "image": "cheesecake.jpg"
+    },
+    {
+      "name": "Sundae Arequipe",
+      "description": "...",
+      "price": 6900.00,
       "image": "cheesecake.jpg"
     }
   ]
@@ -121,113 +205,125 @@
       "storeId": 2,
       "plates": [
         {
-          "name": "Hamburguesa",
+          "name": "Big Mac",
           "description": "...",
-          "price": 10000.00,
-          "image": "hamburguesa.jpg"
+          "price": 5500.00,
+          "image": "pancakes.jpg"
         },
         {
-          "name": "Perro caliente",
+          "name": "McBacon",
           "description": "...",
-          "price": 8000.00,
-          "image": "perrocaliente.jpg"
+          "price": 4500.00,
+          "image": "tortilla.jpg"
         },
         {
-          "name": "Papas fritas",
+          "name": "Cuarto de Libra con Queso",
           "description": "...",
           "price": 5000.00,
-          "image": "papasfritas.jpg"
+          "image": "huevos.jpg"
         },
         {
-          "name": "Onion rings",
+          "name": "McNifica",
+          "description": "...",
+          "price": 4000.00,
+          "image": "arepas.jpg"
+        },
+        {
+          "name": "Hamburguesa con Queso",
           "description": "...",
           "price": 6000.00,
-          "image": "onionrings.jpg"
+          "image": "sandwich.jpg"
         },
         {
-          "name": "Ensalada",
+          "name": "DOBLE BIG MAC",
           "description": "...",
           "price": 7000.00,
           "image": "ensalada.jpg"
         },
         {
-          "name": "Pollo frito",
+          "name": "Doble Big Mac Bacon",
           "description": "...",
-          "price": 9000.00,
-          "image": "pollofrito.jpg"
+          "price": 3000.00,
+          "image": "frijoles.jpg"
         },
         {
-          "name": "Pasta",
+          "name": "Cajita Feliz",
           "description": "...",
-          "price": 8000.00,
-          "image": "pasta.jpg"
+          "price": 3000.00,
+          "image": "frijoles.jpg"
+        },
+        {
+          "name": "Pollo McCrispy Classic",
+          "description": "...",
+          "price": 3000.00,
+          "image": "frijoles.jpg"
         }
       ],
       "drinks": [
         {
-          "name": "Gaseosa",
+          "name": "Coca-Cola",
           "description": "...",
-          "price": 2000.00,
-          "image": "gaseosa.jpg"
+          "price": 3000.00,
+          "image": "avena.jpg"
         },
         {
-          "name": "Jugo de naranja",
+          "name": "Coca-Cola Zero",
+          "description": "...",
+          "price": 2500.00,
+          "image": "chocolate.jpg"
+        },
+        {
+          "name": "Sprite",
           "description": "...",
           "price": 2000.00,
           "image": "jugo.jpg"
         },
         {
-          "name": "Cerveza",
+          "name": "Jugo Del Valle",
           "description": "...",
-          "price": 3000.00,
-          "image": "cerveza.jpg"
-        },
-        {
-          "name": "Vino",
-          "description": "...",
-          "price": 5000.00,
-          "image": "vino.jpg"
+          "price": 2000.00,
+          "image": "cafe.jpg"
         }
       ],
       "desserts": [
         {
-          "name": "Pie de limón",
+          "name": "McFlurry™ Oreo",
           "description": "...",
           "price": 5000.00,
           "image": "pielimon.jpg"
         },
         {
-          "name": "Torta de chocolate",
+          "name": "McFlurry™ M&M's",
           "description": "...",
           "price": 6000.00,
           "image": "tortachocolate.jpg"
         },
         {
-          "name": "Helado",
+          "name": "Sundae Chocolate",
           "description": "...",
           "price": 4000.00,
           "image": "helado.jpg"
         },
         {
-          "name": "Gelatina",
+          "name": "Cono Mixto",
           "description": "...",
           "price": 3000.00,
           "image": "gelatina.jpg"
         },
         {
-          "name": "Flan",
+          "name": "Cono Oreo",
           "description": "...",
           "price": 3500.00,
           "image": "flan.jpg"
         },
         {
-          "name": "Tiramisú",
+          "name": "Manzana",
           "description": "...",
           "price": 7000.00,
           "image": "tiramisu.jpg"
         },
         {
-          "name": "Cheesecake",
+          "name": "Sundae Mora",
           "description": "...",
           "price": 8000.00,
           "image": "cheesecake.jpg"
@@ -238,43 +334,55 @@
       "storeId": 3,
       "plates": [
         {
-          "name": "Patacones",
+          "name": "WHOPPER®",
           "description": "...",
           "price": 5000.00,
           "image": "patacones.jpg"
         },
         {
-          "name": "Sancocho",
+          "name": "WHOPPER® Queso",
           "description": "...",
           "price": 8000.00,
           "image": "sancocho.jpg"
         },
         {
-          "name": "Ajiaco",
+          "name": "WHOPPER® Jr.",
           "description": "...",
           "price": 10000.00,
           "image": "ajiaco.jpg"
         },
         {
-          "name": "Frijoles",
+          "name": "Megastacker Doble",
           "description": "...",
           "price": 3000.00,
           "image": "frijoles.jpg"
         },
         {
-          "name": "Arroz",
+          "name": "Irresistible King",
           "description": "...",
           "price": 4000.00,
           "image": "arroz.jpg"
         },
         {
-          "name": "Pescado",
+          "name": "WHOPPER® Veggie",
           "description": "...",
           "price": 9000.00,
           "image": "pescado.jpg"
         },
         {
-          "name": "Pasta",
+          "name": "King Jr Hamburguesa",
+          "description": "...",
+          "price": 8000.00,
+          "image": "pasta.jpg"
+        },
+        {
+          "name": "BK Queso",
+          "description": "...",
+          "price": 8000.00,
+          "image": "pasta.jpg"
+        },
+        {
+          "name": "BK Doble Queso tocineta",
           "description": "...",
           "price": 8000.00,
           "image": "pasta.jpg"
@@ -282,25 +390,31 @@
       ],
       "drinks": [
         {
-          "name": "Gaseosa",
+          "name": "Pepsi 400 Ml",
           "description": "...",
           "price": 2000.00,
           "image": "gaseosa.jpg"
         },
         {
-          "name": "Jugo de naranja",
+          "name": "Manzana 400 Ml",
           "description": "...",
           "price": 2000.00,
           "image": "jugo.jpg"
         },
         {
-          "name": "Cerveza",
+          "name": "Colombiana 400 Ml",
           "description": "...",
           "price": 3000.00,
           "image": "cerveza.jpg"
         },
         {
-          "name": "Vino",
+          "name": "Agua Cristal",
+          "description": "...",
+          "price": 5000.00,
+          "image": "vino.jpg"
+        },
+        {
+          "name": "Jugo Hit de Mango en Cajita",
           "description": "...",
           "price": 5000.00,
           "image": "vino.jpg"
@@ -308,37 +422,37 @@
       ],
       "desserts": [
         {
-          "name": "Pie de limón",
+          "name": "Cono Sencillo",
           "description": "...",
           "price": 5000.00,
           "image": "pielimon.jpg"
         },
         {
-          "name": "Torta de chocolate",
+          "name": "Cono Crocante",
           "description": "...",
           "price": 6000.00,
           "image": "tortachocolate.jpg"
         },
         {
-          "name": "Helado",
+          "name": "Sundae Frutos Rojos",
           "description": "...",
           "price": 4000.00,
           "image": "helado.jpg"
         },
         {
-          "name": "Gelatina",
+          "name": "King Mix Oreo",
           "description": "...",
           "price": 3000.00,
           "image": "gelatina.jpg"
         },
         {
-          "name": "Flan",
+          "name": "Hershey's® Pie",
           "description": "...",
           "price": 3500.00,
           "image": "flan.jpg"
         },
         {
-          "name": "Cheesecake",
+          "name": "Malteada Vainilla",
           "description": "...",
           "price": 8000.00,
           "image": "cheesecake.jpg"
@@ -426,5 +540,7 @@
         }
         ]
     }
+
+
 ]
 }

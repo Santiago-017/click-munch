@@ -46,13 +46,13 @@
       "longitude": -74.876548
     },
     {
-      "name": "Barbaros",
-      "alias":"Calle 45",
+      "name": "Valientes Al Fuego",
+      "alias":"Calle 85",
       "email": "barbaros45@gmail.com",
       "password": "Password1234",
-      "address": "Calle 45 # 8 74, Piso 15, Bogotá, Cundinamarca, Colombia",
-      "latitude": 5.6584656,
-      "longitude": -74.21365465
+      "address": "calle 85 # 18 90, Piso 1, Bogotá, Cundinamarca, Colombia",
+      "latitude": 5.654651,
+      "longitude": -74.876548
     },
     {
       "name": "Sanalejo",
