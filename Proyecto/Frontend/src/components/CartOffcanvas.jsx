@@ -3,7 +3,7 @@ import { Offcanvas, Button, ListGroup, Image } from "react-bootstrap";
 import { useCart } from "../context/CartContext";
 
 function CartOffcanvas({ show, handleClose }) {
-    const { cart, removeFromCart, clearCart, decreaseQuantity, addToCart } = useCart();
+    const { cart, removeFromCart, clearCart, decreaseQuantity, addToCart, placeOrder } = useCart();
 
     return (
         <Offcanvas show={show} onHide={handleClose} placement="end" className="cart-offcanvas">
@@ -35,7 +35,14 @@ function CartOffcanvas({ show, handleClose }) {
                         </ListGroup>
                         <div className="mt-3 d-flex justify-content-between">
                             <Button variant="danger" onClick={clearCart}>Vaciar Carrito</Button>
-                            <Button variant="success">Realizar Pedido</Button>
+                            <Button variant="success" onClick={() => {
+                                console.log("Botón de Realizar Pedido presionado"); // 🔴 Verifica en consola
+                                placeOrder(1, "CARD"); // 🔴 storeId = 1 y pago con tarjeta
+                                handleClose();
+                        }}>
+                                Realizar Pedido
+                            </Button>
+
                         </div>
                     </>
                 )}
