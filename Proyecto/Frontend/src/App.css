@@ -101,6 +101,38 @@ body {
   text-align: center;
 }
 
+/* Asegurar que el menú desplegable ocupe toda la altura */
+.custom-offcanvas {
+  height: 100vh !important; /* Hace que el menú ocupe toda la pantalla */
+  width: 60%; /* Ajusta el ancho si es necesario */
+  background-color: #d9534f; /* Rojo suave */
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Asegurar que los elementos dentro del menú ocupen el espacio correctamente */
+.custom-offcanvas .offcanvas-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start; /* Alinear los elementos arriba */
+  padding-top: 20px;
+}
+
+/* Asegurar que los links sean visibles y bien distribuidos */
+.custom-offcanvas .nav-link {
+  color: white !important;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 20px;
+}
+
+.custom-offcanvas .nav-link:hover {
+  background-color: #c9302c;
+}
+
+
 /* Ajuste responsivo */
 @media (max-width: 768px) {
   .navbar-title {
@@ -120,4 +152,30 @@ body {
   .close-btn {
     left: 150px;
   }
+}
+.cart-button {
+  background-color: #d32f2f; /* Rojo similar a Material UI */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cart-button:hover {
+  background-color: #b71c1c;
+}
+
+.cart-offcanvas {
+  background-color: #fff3f3; /* Fondo más suave */
+}
+
+.cart-offcanvas .offcanvas-header {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.cart-offcanvas .offcanvas-body {
+  background-color: #fff3f3;
 }
