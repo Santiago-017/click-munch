@@ -93,7 +93,7 @@ function StoreMenu() {
                                             src={`/images/${drink.image}`}
                                             alt={drink.name}
                                             className="rounded-top"
-                                            style={{ height: "150px", objectFit: "cover" }}
+                                            style={{ height: "150px", objectFit: "contain" }}
                                         />
                                         <Card.Body className="text-center p-2">
                                             <Card.Title className="fw-semibold fs-6">{drink.name}</Card.Title>

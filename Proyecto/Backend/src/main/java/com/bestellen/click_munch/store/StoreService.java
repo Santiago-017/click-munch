@@ -78,6 +78,7 @@ public class StoreService {
                 store.address(),
                 store.latitude(),
                 store.longitude(),
+                store.logo(),
                 store.email());
     }
 

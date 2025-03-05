@@ -7,7 +7,8 @@
       "password": "Password1234567",
       "address": "Calle 45 # 8 74, Piso 1, Bogotá, Cundinamarca, Colombia",
       "latitude": 5.6584656,
-      "longitude": -74.21365465
+      "longitude": -74.21365465,
+      "logo": "mcdonalds.png"
     },
     {
       "name": "Mc Donnalds",
@@ -16,7 +17,8 @@
       "password": "Password1234567",
       "address": "Calle 53 # 13 70, Piso 1, Bogotá, Cundinamarca, Colombia",
       "latitude": 5.654651,
-      "longitude": -74.876548
+      "longitude": -74.876548,
+      "logo": "mcdonalds.png"
     },
     {
       "name": "Burger King",
@@ -25,7 +27,8 @@
       "password": "Password1234567",
       "address": "Calle 45 # 8 74, Piso 1, Bogotá, Cundinamarca, Colombia",
       "latitude": 5.6584656,
-      "longitude": -74.21365465
+      "longitude": -74.21365465,
+      "logo": "bklogo.png"
     },
     {
       "name": "Burger King",
@@ -34,7 +37,8 @@
       "password": "Password1234567",
       "address": "Calle 63 # 13 70, Piso 10, Bogotá, Cundinamarca, Colombia",
       "latitude": 5.654651,
-      "longitude": -74.876548
+      "longitude": -74.876548,
+      "logo": "bklogo.png"
     },
     {
       "name": "Sopitas y Frijolada",
@@ -43,7 +47,8 @@
       "password": "Password1234567",
       "address": "Calle 53 # 13 70, Piso 1, Bogotá, Cundinamarca, Colombia",
       "latitude": 5.654651,
-      "longitude": -74.876548
+      "longitude": -74.876548,
+      "logo": "sopitas.jpg"
     },
     {
       "name": "Valientes Al Fuego",
@@ -52,7 +57,8 @@
       "password": "Password1234",
       "address": "calle 85 # 18 90, Piso 1, Bogotá, Cundinamarca, Colombia",
       "latitude": 5.654651,
-      "longitude": -74.876548
+      "longitude": -74.876548,
+      "logo": "valfuego.jpg"
     },
     {
       "name": "Sanalejo",
@@ -61,16 +67,18 @@
       "password": "Password12367",
       "address": "Calle 85 # 13 70, Piso 2, Bogotá, Cundinamarca, Colombia",
       "latitude": 5.654651,
-      "longitude": -74.876548
+      "longitude": -74.876548,
+      "logo": "sanalejo.jpg"
     },
     {
-      "name": "Cumbiambare",
+      "name": "La Barca del sabor",
       "alias":"Principal",
       "email": "cumbiabar@gmail.com",
       "password": "Password123",
       "address": "Calle 53 # 13 70, Piso 1, Bogotá, Cundinamarca, Colombia",
       "latitude": 5.654651,
-      "longitude": -74.876548
+      "longitude": -74.876548,
+      "logo": "labarca.png"
     }
   ]
 }

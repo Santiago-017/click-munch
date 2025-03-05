@@ -27,6 +27,7 @@ public record Store(
         String address,
         Double latitude,
         Double longitude,
+        String logo,
         @MappedCollection(idColumn = "store_id")
         List<Plate> plates,
         @MappedCollection(idColumn = "store_id")

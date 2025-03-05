@@ -44,6 +44,12 @@ function Stores() {
           filteredStores.map((store) => (
             <Col key={store.id} md={4} sm={6} xs={12} className="mb-4">
               <Card className="shadow">
+                <Card.Img
+                  variant="top"
+                  src={`/images/${store.logo}`}
+                  alt={store.name}
+                  style={{ height: "150px", objectFit: "contain", width: "100%" }}
+                  />
                 <Card.Body>
                   <Card.Title>{store.name}</Card.Title>
                   <Card.Text>{store.address}</Card.Text>
