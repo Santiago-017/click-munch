@@ -12,6 +12,7 @@
 /Proyecto/Frontend/.pnp.js
 /Proyecto/Backend/.gradle
 /Proyecto/Backend/.idea
+/Proyecto/Backend/build
 
 # testing
 /coverage
