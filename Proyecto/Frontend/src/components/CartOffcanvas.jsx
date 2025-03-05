@@ -35,13 +35,13 @@ function CartOffcanvas({ show, handleClose }) {
                         </ListGroup>
                         <div className="mt-3 d-flex justify-content-between">
                             <Button variant="danger" onClick={clearCart}>Vaciar Carrito</Button>
-                            <Button variant="success" onClick={() => {
-                                console.log("Botón de Realizar Pedido presionado"); // 🔴 Verifica en consola
-                                placeOrder(1, "CARD"); // 🔴 storeId = 1 y pago con tarjeta
-                                handleClose();
-                        }}>
+                            <Button 
+                            variant="success" 
+                            onClick={() => placeOrder(1, cart.length > 0 ? cart[0].storeId : null, "CARD")}
+                            >
                                 Realizar Pedido
                             </Button>
+
 
                         </div>
                     </>

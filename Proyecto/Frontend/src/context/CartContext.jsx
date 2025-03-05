@@ -15,7 +15,7 @@ export function CartProvider({ children }) {
           item.id === newItem.id ? { ...item, quantity: item.quantity + 1 } : item
         );
       }
-      return [...prevCart, { ...newItem, quantity: 1 }];
+      return [...prevCart, { ...newItem, quantity: 1, type: newItem.type }];
     });
   };
 
@@ -35,18 +35,36 @@ export function CartProvider({ children }) {
     setCart([]);
   };
 
-  const placeOrder = async (storeId, paymentMethod) => {
-    try {
-      console.log("Ejecutando placeOrder...");
-  
-      const userId = 1; // 🔴 Usuario predeterminado
-  
-      const plateIds = cart.filter(item => item.type === "plate").map(item => item.id);
-      const drinkIds = cart.filter(item => item.type === "drink").map(item => item.id);
-      const dessertIds = cart.filter(item => item.type === "dessert").map(item => item.id);
-      const totalAmount = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  
-      const orderData = {
+  console.log("📦 Carrito antes de procesar:", cart);
+
+
+  const placeOrder = async (userId, storeId, paymentMethod) => {
+    console.log("Ejecutando placeOrder...");
+    console.log("📦 Contenido del carrito antes de procesar:", cart);
+
+    if (!storeId || typeof storeId !== "number") {
+        console.error("❌ Error: storeId inválido:", storeId);
+        alert("Error: No se identificó la tienda correctamente.");
+        return;
+    }
+
+    // 🔍 Extraer productos verificando que tengan `type` correctamente definido
+    const plateIds = cart.filter(item => item.type?.toLowerCase() === "plate").map(item => item.id);
+    const drinkIds = cart.filter(item => item.type?.toLowerCase() === "drink").map(item => item.id);
+    const dessertIds = cart.filter(item => item.type?.toLowerCase() === "dessert").map(item => item.id);
+
+    console.log("🍽️ Plates:", plateIds, "🥤 Drinks:", drinkIds, "🍰 Desserts:", dessertIds);
+
+    if (plateIds.length === 0 && drinkIds.length === 0 && dessertIds.length === 0) {
+        alert("Error: No se encontraron productos en la orden.");
+        return;
+    }
+
+    // Calcular total correctamente
+    const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+    // Crear el JSON para la orden
+    const orderData = {
         userId,
         storeId,
         plateIds,
@@ -55,19 +73,19 @@ export function CartProvider({ children }) {
         totalAmount,
         status: "PENDING",
         paymentMethod,
-      };
-  
-      console.log("Enviando orden:", orderData); // 🔴 Verifica en la consola
-  
-      await createOrder(orderData);
-      alert("Orden creada exitosamente");
-      clearCart();
+    };
+
+    console.log("✅ Enviando orden con datos corregidos:", orderData);
+
+    try {
+        await createOrder(orderData);
+        alert("Orden creada exitosamente");
+        clearCart();
     } catch (error) {
-      console.error("Error al crear la orden:", error);
-      alert("Error al crear la orden: " + error.message);
+        alert("Error al crear la orden: " + error.message);
     }
-  };
-  
+};
+
 
 
   return (

@@ -54,6 +54,11 @@ function NavigationBar() {
                         <button className="close-btn" onClick={handleCloseMenu}>X</button>
                         <Nav className="flex-column">
                             <Nav.Link className="menu-item" onClick={handleNavigateHome}>Inicio</Nav.Link>
+                            <Nav.Link as={Link} to="/orders" className="menu-item" onClick={handleCloseMenu}>
+                                Órdenes
+                            </Nav.Link>
+
+
                             <Nav.Link as={Link} to="/contacto" className="menu-item" onClick={handleCloseMenu}>
                                 Contáctenos
                             </Nav.Link>

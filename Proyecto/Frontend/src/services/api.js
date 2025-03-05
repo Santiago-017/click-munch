@@ -33,3 +33,13 @@ export const createOrder = async (orderData) => {
       throw new Error("Error al crear la orden: " + (error.response ? error.response.data.message : error.message));
   }
 };
+
+// Obtener todas las órdenes
+export const getAllOrders = async () => {
+  try {
+      const response = await axios.get(`${API_URL}/orders`);
+      return response.data;
+  } catch (error) {
+      throw new Error("Error al obtener las órdenes: " + error.message);
+  }
+};
